@@ -1,0 +1,24 @@
+{
+  "name": "fishfx.system",
+  "version": "20.4.1",
+  "description": "fishfx中system部分的实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cn-troy/fishfx.system.git"
+  },
+  "keywords": [
+    "typescript",
+    "fishfx",
+    "corefx"
+  ],
+  "author": "Troy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cn-troy/fishfx.system/issues"
+  },
+  "homepage": "https://github.com/cn-troy/fishfx.system#readme"
+}
