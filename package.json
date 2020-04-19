@@ -1,8 +1,8 @@
 {
   "name": "fishfx.system",
-  "version": "20.4.1",
+  "version": "1.0.0",
   "description": "fishfx中system部分的实现",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
