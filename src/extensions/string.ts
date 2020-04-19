@@ -2,13 +2,16 @@ export { };
 
 declare global {
   interface String {
-    /** 转换为小写 */
+    /** 
+     * 转换为小写 */
     f_toLower(): string;
 
-    /** 转换为大写 */
+    /** 
+     * 转换为大写 */
     f_toUpper(): string;
 
-    /** 验证字符串是null, undefined, "" */
+    /** 
+     * 验证字符串是null, undefined, "" */
     f_isNullOrEmpty(): boolean;
 
     /**
