@@ -14,82 +14,56 @@ export default class timeSpan {
   private _smallerTime?: dateTime;
   private _ticks: number = 0;
 
-  public ticksPerMillisecond: number = 10000;
-  private millisecondsPerTick: number = 1.0 / this.ticksPerMillisecond;
-
-  public ticksPerSecond: number = this.ticksPerMillisecond * 1000;   // 10,000,000
-  private secondsPerTick: number = 1.0 / this.ticksPerSecond;         // 0.0000001
-
-  public ticksPerMinute: number = this.ticksPerSecond * 60;         // 600,000,000
-  private minutesPerTick: number = 1.0 / this.ticksPerMinute; // 1.6666666666667e-9
-
-  public ticksPerHour: number = this.ticksPerMinute * 60;        // 36,000,000,000
-  private hoursPerTick: number = 1.0 / this.ticksPerHour; // 2.77777777777777778e-11
-
-  public ticksPerDay: number = this.ticksPerHour * 24;          // 864,000,000,000
-  private daysPerTick: number = 1.0 / this.ticksPerDay; // 1.1574074074074074074e-12
-
-  private millisPerSecond: number = 1000;
-  private millisPerMinute: number = this.millisPerSecond * 60; //     60,000
-  private millisPerHour: number = this.millisPerMinute * 60;   //  3,600,000
-  private millisPerDay: number = this.millisPerHour * 24;      // 86,400,000
-
-  // public maxSeconds = Number.MAX_VALUE / this.ticksPerSecond;
-  // public minSeconds = Number.MIN_VALUE / this.ticksPerSecond;
-
-  public maxMilliSeconds = Number.MAX_VALUE / this.ticksPerMillisecond;
-  public minMilliSeconds = Number.MIN_VALUE / this.ticksPerMillisecond;
 
   // public ticksPerTenthSecond = this.ticksPerMillisecond * 100;
   public get ticks() {
     return this._ticks;
   }
 
-  public get days() {
-    return this._ticks / this.ticksPerDay;
-  }
+  // public get days() {
+  //   return Math.round(this._ticks / this.ticksPerDay);
+  // }
 
-  public get hours() {
-    return (this._ticks / this.ticksPerHour) % 24;
-  }
+  // public get hours() {
+  //   return Math.round((this._ticks / this.ticksPerHour) % 24);
+  // }
 
-  public get milliseconds() {
-    return (this._ticks / this.ticksPerMillisecond) % 1000;
-  }
+  // public get milliseconds() {
+  //   return Math.round((this._ticks / this._ticks) % 1000);
+  // }
 
-  public get minutes() {
-    return (this._ticks / this.ticksPerMinute) % 60;
-  }
+  // public get minutes() {
+  //   return Math.round((this._ticks / this.ticksPerMinute) % 60);
+  // }
 
-  public get seconds() {
-    return (this._ticks / this.ticksPerSecond) % 60;
-  }
+  // public get seconds() {
+  //   return Math.round((this._ticks / this.ticksPerSecond) % 60);
+  // }
 
-  public get totalDays() {
-    return this._ticks * this.daysPerTick;
-  }
+  // public get totalDays() {
+  //   return Math.round(this._ticks * this.daysPerTick);
+  // }
 
-  public get totalHours() {
-    return this._ticks * this.hoursPerTick;
-  }
+  // public get totalHours() {
+  //   return Math.round(this._ticks * this.hoursPerTick);
+  // }
 
-  public get totalMilliseconds() {
-    const temp: number = this._ticks * this.millisecondsPerTick;
-    if (temp > this.maxMilliSeconds)
-      return this.maxMilliSeconds;
+  // public get totalMilliseconds() {
+  //   if (this._ticks > this.maxMilliSeconds)
+  //     return this.maxMilliSeconds;
 
-    if (temp < this.minMilliSeconds)
-      return this.minMilliSeconds;
+  //   if (this._ticks < this.minMilliSeconds)
+  //     return this.minMilliSeconds;
 
-    return temp;
-  }
+  //   return this._ticks;
+  // }
 
   public get totalMinutes() {
-    return this._ticks * this.minutesPerTick;
+    return Math.round(this._ticks / 1000 / 60);
   }
 
   public get totalSeconds() {
-    return this._ticks * this.secondsPerTick;
+    return Math.round(this._ticks / 1000);
   }
 
 }

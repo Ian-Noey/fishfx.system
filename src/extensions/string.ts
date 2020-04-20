@@ -12,7 +12,7 @@ declare global {
 
     /** 
      * 验证字符串是null, undefined, "" */
-    f_isNullOrEmpty(): boolean;
+    f_isEmpty(): boolean;
 
     /**
      * 向字符串中插入新的字符串
@@ -109,8 +109,8 @@ String.prototype.f_toUpper = function (): string {
   return this.toUpperCase();
 }
 
-String.prototype.f_isNullOrEmpty = function (): boolean {
-  return this === null || this === undefined || this.length <= 0;
+String.prototype.f_isEmpty = function (): boolean {
+  return this.length <= 0;
 }
 
 String.prototype.f_insert = function (value: string, startIndex: number): string {
@@ -222,7 +222,7 @@ String.prototype.f_isNumber = function (): boolean {
 String.prototype.f_isDateTime = function (): boolean {
   if (this.f_isNumber())
     return false;
-    
+
   const dateTime = new Date(this.toString());
   return dateTime instanceof Date && !isNaN(dateTime.getTime());
 }
