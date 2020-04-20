@@ -1,5 +1,5 @@
 import "../extensions/string";
-import { exception } from '../exception';
+import { exception } from '..';
 export default class convert {
   /**
    * 将字符串转换为Number类型

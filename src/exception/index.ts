@@ -18,9 +18,21 @@ export namespace exception {
     }
   }
 
-  export class overflowException extends Error{
+  export class overflowException extends Error {
     constructor(message?: string) {
       super(`overflowException：${(message ?? "检查上下文中的算术、强制转换或转换操作导致溢出。")}`);
+    }
+  }
+
+  export class argumentOutOfRangeException extends Error {
+    constructor(message?: string) {
+      super(`argumentOutOfRangeException：${(message ?? "指定的参数已超出有效值的范围。")}`);
+    }
+  }
+
+  export class notImplementedException extends Error {
+    constructor(message?: string) {
+      super(`notImplementedException：${(message ?? "未实现该方法或操作。")}`);
     }
   }
 }

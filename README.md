@@ -8,3 +8,7 @@
 2. 异常的定义，如：`indexOutOfRangeException`、`nullReferenceException` 等。
 3. `convert` 转换器的实现。
 
+## 如何测试
+1. 使用 `npm` 或 `yarn` 安装依赖。
+2. 使用 `vs code` 打开 `test` 目录中的任意测试文件，F5运行。
+3. 如提示选择运行模式，请选择 `Node.js`
