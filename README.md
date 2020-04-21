@@ -1,3 +1,4 @@
+### 本项目已迁移至fishfx仓库 [点击前往](https://github.com/cn-troy/fishfx)
 # FishFX.System
 该仓库主要是对 `fishfx` 中 `system` 核心部分进行实现。
 
